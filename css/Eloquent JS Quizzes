@@ -1,0 +1,73 @@
+/*chess board*/
+
+var size = 20;
+var board = "";
+for (a = 1; a <= size; a++){ /*this outer-loop creates the row*/
+  for (b = 1; b <= size; b++){ /*this inner-loop populates the row according to size*/
+    if ((a + b) % 2 === 0) /*adding a + b gives you alternating even and odd values, because the inner and outer loops don't simultaneously increment*/
+        board += " ";
+    else
+        board += "#";
+  }
+  board += "\n"; /* the inner loop has ended and this ends the row.
+}
+console.log(board);
+
+Triangle Quiz
+
+
+
+/*Power Function*/
+var power = function(base, exponent) { /* function power(base, exponent) { */
+  if (exponent == undefined)
+    exponent == 2;
+  var result = 1;
+  for (var count = 0; count < exponent; count++)
+    result *= base;
+  return result;
+}
+console.log(power(4));
+// 16
+console.log(power(4,3));
+// 64
+
+
+/*Here's a function that multiplies by an arbitrary amount*/
+function multiplier(factor) {
+  return function(number) {
+    return number * factor;
+  };
+}
+var twice = multiplier(2);
+console.log(twice(5));
+// 10
+
+
+/* Minimum */
+function min(a, b) {
+  if (a < b)
+    return a;
+  else
+    return b;
+}
+
+/* Evens (an example of a recursive function) */
+function isEven(number){
+  if (number == 0)
+    return true;
+  else if (number == 1)
+    return false;
+  else if (number < 0)
+    return isEven(-number); //switches the number to positive
+  else
+    return isEven(number - 2); //subtracts 2 from the number repeatedly until reaching either 1 or 0
+}
+
+
+function countBs(string){
+  var bCount = function() {
+    result = 0
+    for(x = 0; x < string.length; x++)
+      string.find(B);
+    return result
+}
